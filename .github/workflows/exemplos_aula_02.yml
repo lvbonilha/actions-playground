@@ -1,7 +1,11 @@
-name: Checkout de código
+name: Workflow de exemplo
 
 on:
   push:
+  
+env:
+  VARIAVEL_1: Pedro Lacerda
+  VARIAVEL_2: Belo Horizonte
 
 jobs:
 
@@ -15,3 +19,7 @@ jobs:
 
     - name: Lista conteúdo do runner
       run: ls -a
+      
+    - run: echo Meu nome é ${{ env.VARIAVEL_1 }}
+    
+    - run: echo Moro em ${{ env.VARIAVEL_2 }}
