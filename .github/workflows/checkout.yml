@@ -1,17 +1,17 @@
 name: Checkout de código
 
 on:
-	push:
-	
+  push:
+
 jobs:
 
-	checkout_code:
-		name: Faz checkout do codigo
-		runs-on: ubuntu-latest
-		
-		steps:
-			- name: Checkout repositório
-				uses: actions/checkout@v3.3.0
-				
-			- name: Lista conteúdo do runner
-				run: ls -a
+  checkout_code:
+    name: Faz checkout do codigo
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repositório
+      uses: actions/checkout@v3.3.0
+
+    - name: Lista conteúdo do runner
+      run: ls -a
