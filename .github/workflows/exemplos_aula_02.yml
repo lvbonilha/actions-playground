@@ -12,7 +12,8 @@ jobs:
   checkout_code:
     name: Faz checkout do codigo
     runs-on: ubuntu-latest
-
+    env:
+      VARIAVEL_JOB: 33
     steps:
     - name: Checkout repositório
       uses: actions/checkout@v3.3.0
@@ -21,5 +22,5 @@ jobs:
       run: ls -a
       
     - run: echo Meu nome é ${{ env.VARIAVEL_1 }}
-    
     - run: echo Moro em ${{ env.VARIAVEL_2 }}
+    - run: echo Minha idade é ${{ env.VARIAVEL_JOB }}
