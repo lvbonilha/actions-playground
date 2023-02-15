@@ -32,4 +32,4 @@ jobs:
     needs: checkout_code
     
     steps:
-      - run: echo Meu número da sorte é ${{ env.VARIAVEL_JOB }}
+      - run: echo Meu melhor amigo é ${{ vars.NOME }}
